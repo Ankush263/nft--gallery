@@ -13,9 +13,7 @@ const NFTCard = (props) => {
                 <p className="text-gray-600" >{props.nft.contract.address}</p>
             </div>
 
-            <div className="flex-grow mt-2">
-                <p className="text-gray-600">{props.nft.description}</p>
-            </div>
+            
         </div>
 
     </div>
