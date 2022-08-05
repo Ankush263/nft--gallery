@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import NFTCard from './NFTCard';
 
 
 function App() {
@@ -95,6 +96,15 @@ function App() {
           <input type="checkbox" onChange={(e) => setFetchForCollection(e.target.checked)} />
         </label>
         <button className={"disabled:bg-slate-500 text-white bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={fetchForCollection ? fetchNFTsForCollection : fetchNFTs}>Let's Go</button>
+      </div>
+      <div className='nftBox'>
+          {
+            NFTs.length && NFTs.map(nft => {
+              return (
+                <NFTCard nft={nft} />
+              )
+            })
+          }
       </div>
     </div>
   );
