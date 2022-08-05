@@ -97,7 +97,7 @@ function App() {
         </label>
         <button className={"disabled:bg-slate-500 text-white bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={fetchForCollection ? fetchNFTsForCollection : fetchNFTs}>Let's Go</button>
       </div>
-      <div className='nftBox'>
+      <div className='grid grid-cols-3'>
           {
             NFTs.length && NFTs.map(nft => {
               return (
